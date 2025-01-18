@@ -185,7 +185,7 @@ if confirm "Do you want to update package.json scripts?"; then
     if [ -f "package.json" ]; then
         if [ -f "tsconfig.json" ]; then
             # TypeScript project
-            sed -i.bak 's|"start": "react-scripts start"|"start": "vite"|g; s|"build": "react-scripts build"|"build": "tsc && vite build"|g; s|"test": "react-scripts test"|"serve": "vite preview"|g' package.json
+            sed -i.bak 's|"start": "react-scripts start"|"start": "vite"|g; s|"build": "react-scripts build"|"build": "vite build"|g; s|"test": "react-scripts test"|"serve": "vite preview"|g' package.json
         else
             # JavaScript project
             sed -i.bak 's|"start": "react-scripts start"|"start": "vite"|g; s|"build": "react-scripts build"|"build": "vite build"|g; s|"test": "react-scripts test"|"serve": "vite preview"|g' package.json
